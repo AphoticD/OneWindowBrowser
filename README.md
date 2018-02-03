@@ -9,8 +9,9 @@ Features:
   * Java and plugins are disabled.
   * Defaults to iPad OS 3.2.2 User Agent (defaults to load most mobile sites).
   * Back/Forward controls and History menu remains non-persistent (Private) between launches.
+  * Window can be faded in or out (alpha transparency).
   * Last visited URL persists between app launches.
-  * Text size and window frame persists between launches.
+  * Text size and window frame (and transparency) persists between launches.
  
 Note: Although this browser may run on your system, it doesn't introduce anything new in terms of capability or compatibility. If a website doesn't load in Safari, it probably won't load in this browser.
 
