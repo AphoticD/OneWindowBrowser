@@ -17,10 +17,6 @@
 {
 	//load the window's size and position from the auto-save
 	[[self window] setFrameAutosaveName:@"OneWindowBrowser"];
-
-	  NSArray *path_array = [NSArray arrayWithObjects:@"../share/doc/qemu/", @"../doc/qemu/", @"../", nil];
-	
-	NSLog(@"%@", path_array);
 	
 } //awakeFromNib
 
