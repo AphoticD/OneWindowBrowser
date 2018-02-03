@@ -7,8 +7,8 @@ Download pre-compiled builds (.zip) or
 
 Features:
   * Java and plugins are disabled.
-  * Defaults to iPad OS 3.2.2 User Agent (deafults to mobile sites).
-  * Back/Forward controls and History menu (non-persistent between launches).
+  * Defaults to iPad OS 3.2.2 User Agent (defaults to load most mobile sites).
+  * Back/Forward controls and History menu remains non-persistent (Private) between launches.
   * Last visited URL persists between app launches.
   * Text size and window frame persists between launches.
  
