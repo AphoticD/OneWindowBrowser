@@ -1,4 +1,8 @@
 # OneWindowBrowser
+
+![Screenshot of OneWindowBrowser]
+(https://github.com/AphoticD/OneWindowBrowser/blob/master/OneWindowBrowserScreenShot.jpg)
+
 Simple proof of concept Cocoa (WebKit) browser GUI, which runs on Jaguar 10.2.x through to High Sierra 10.13.x
 
 Download pre-compiled builds (.zip) or
