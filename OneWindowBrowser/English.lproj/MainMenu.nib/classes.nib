@@ -1,9 +1,10 @@
 {
     IBClasses = (
         {
+            ACTIONS = {performFadeIn = id; performFadeOut = id; }; 
             CLASS = AppDelegate; 
             LANGUAGE = ObjC; 
-            OUTLETS = {window = NSWindow; }; 
+            OUTLETS = {fadeIn = NSMenuItem; fadeOut = NSMenuItem; window = NSWindow; }; 
             SUPERCLASS = NSObject; 
         }, 
         {
@@ -27,7 +28,7 @@
         {
             CLASS = WindowHelper; 
             LANGUAGE = ObjC; 
-            OUTLETS = {browserController = BrowserController; }; 
+            OUTLETS = {browserController = BrowserController; window = NSWindow; }; 
             SUPERCLASS = NSObject; 
         }
     ); 
