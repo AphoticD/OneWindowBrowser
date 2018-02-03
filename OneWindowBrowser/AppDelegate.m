@@ -13,7 +13,7 @@
 
 #define kFadeMin 0.2
 #define kFadeMax 1.0
-#define kFadeStep 0.2
+#define kFadeStep 0.15
 
 @implementation AppDelegate
 
@@ -72,6 +72,8 @@
 {
     if([[self window] alphaValue] < kFadeMax)
         [[self window] setAlphaValue:[[self window] alphaValue] + kFadeStep];
+	else
+		[[self window] setAlphaValue:kFadeMax];
 
 } //performFadeIn
 
@@ -80,6 +82,8 @@
 {
     if([[self window] alphaValue] > kFadeMin + kFadeStep)
         [[self window] setAlphaValue:[[self window] alphaValue] - kFadeStep];
+	else
+		[[self window] setAlphaValue:kFadeMin];
 
 } //performFadeOut:
      

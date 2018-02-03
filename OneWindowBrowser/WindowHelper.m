@@ -20,10 +20,11 @@
 	
 	float textSize = [[[self browserController] myWebView] textSizeMultiplier];
 	[[NSUserDefaults standardUserDefaults] setFloat:textSize forKey:@"textSize"];
+	    
+	//save to the user defaults
+	[[NSUserDefaults standardUserDefaults] setFloat:[[self window] alphaValue]
+											 forKey:@"windowAlpha"];
 	
-    float windowAlpha = [[self window] alphaValue];
-    [[NSUserDefaults standardUserDefaults] setFloat:windowAlpha forKey:@"windowAlpha"];
-    
 	return YES; //close the window
 	
 } //windowShouldClose:
