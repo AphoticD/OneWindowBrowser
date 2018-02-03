@@ -19,19 +19,9 @@
 	IBOutlet NSMenu *historyMenu;
 	IBOutlet NSButton *stopButton;
 	IBOutlet NSButton *reloadButton;
-	
+    
 	NSMutableArray *historyURLs;
 }
-
-- (NSButton *) backButton;
-- (NSButton *) forwardButton;
-- (NSTextField *) address;
-- (WebView *) myWebView;
-- (NSProgressIndicator *) myProgress;
-- (NSMenu *) historyMenu;
-- (NSButton *) stopButton;
-- (NSButton *) reloadButton;
-
 
 - (NSMutableArray *) historyURLs;
 
@@ -41,5 +31,14 @@
 			  withURL: (NSURL *) urlToAdd;
 
 - (void) performHistoryMenuItem: (id) sender;
+
+- (NSButton *) backButton;
+- (NSButton *) forwardButton;
+- (NSTextField *) address;
+- (WebView *) myWebView;
+- (NSProgressIndicator *) myProgress;
+- (NSMenu *) historyMenu;
+- (NSButton *) stopButton;
+- (NSButton *) reloadButton;
 
 @end

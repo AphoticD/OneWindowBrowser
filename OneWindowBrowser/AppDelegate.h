@@ -10,9 +10,17 @@
 
 
 @interface AppDelegate : NSObject {
-	IBOutlet NSWindow *window;	
+	IBOutlet NSWindow *window;
+    
+    IBOutlet NSMenuItem *fadeIn;
+    IBOutlet NSMenuItem *fadeOut;
 }
 
 - (NSWindow *) window;
+- (NSMenuItem *) fadeIn;
+- (NSMenuItem *) fadeOut;
+
+- (void) performFadeIn: (id) sender;
+- (void) performFadeOut: (id) sender;
 
 @end

@@ -22,7 +22,7 @@
 	[stopButton release];
 	[reloadButton release];
 	[historyURLs release];
-	
+    
 	[super dealloc];
 
 } //dealloc

@@ -11,8 +11,10 @@
 
 @interface WindowHelper : NSObject {
 	IBOutlet BrowserController *browserController;
+    IBOutlet NSWindow *window;
 }
 
 - (BrowserController *) browserController;
+- (NSWindow *) window;
 
 @end
