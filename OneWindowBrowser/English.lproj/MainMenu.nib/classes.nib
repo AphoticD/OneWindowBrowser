@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {
+            CLASS = AppDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {window = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {enterAddress = id; performHistoryMenuItem = id; }; 
+            CLASS = BrowserController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                address = NSTextField; 
+                backButton = NSButton; 
+                forwardButton = NSButton; 
+                historyMenu = NSMenu; 
+                myProgress = NSProgressIndicator; 
+                myWebView = WebView; 
+                reloadButton = NSButton; 
+                stopButton = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            CLASS = WindowHelper; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {browserController = BrowserController; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
