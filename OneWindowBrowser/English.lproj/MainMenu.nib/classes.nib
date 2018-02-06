@@ -1,21 +1,42 @@
 {
     IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
             ACTIONS = {performFadeIn = id; performFadeOut = id; }; 
-            CLASS = AppDelegate; 
+            CLASS = OWAppDelegate; 
             LANGUAGE = ObjC; 
-            OUTLETS = {fadeIn = NSMenuItem; fadeOut = NSMenuItem; window = NSWindow; }; 
+            OUTLETS = {
+                browserController = OWBrowserController; 
+                fadeIn = NSMenuItem; 
+                fadeOut = NSMenuItem; 
+                window = NSWindow; 
+            }; 
             SUPERCLASS = NSObject; 
         }, 
         {
-            ACTIONS = {enterAddress = id; performHistoryMenuItem = id; }; 
-            CLASS = BrowserController; 
+            ACTIONS = {
+                enterAddress = id; 
+                performClearHistory = id; 
+                performCustomUserAgentOption = id; 
+                performDisableJavascriptOption = id; 
+                performGoToLanding = id; 
+                performHistoryMenuItem = id; 
+                performSetLandingToCustom = id; 
+                performSetLandingToLastViewed = id; 
+            }; 
+            CLASS = OWBrowserController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
                 address = NSTextField; 
                 backButton = NSButton; 
+                clearHistory = NSMenuItem; 
+                customUserAgentOption = NSMenuItem; 
+                disableJavascriptOption = NSMenuItem; 
                 forwardButton = NSButton; 
+                goToLanding = NSMenuItem; 
                 historyMenu = NSMenu; 
+                landingCustom = NSMenuItem; 
+                landingLastViewed = NSMenuItem; 
                 myProgress = NSProgressIndicator; 
                 myWebView = WebView; 
                 reloadButton = NSButton; 
@@ -23,12 +44,10 @@
             }; 
             SUPERCLASS = NSObject; 
         }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
         {
-            CLASS = WindowHelper; 
+            CLASS = OWWindowHelper; 
             LANGUAGE = ObjC; 
-            OUTLETS = {browserController = BrowserController; window = NSWindow; }; 
+            OUTLETS = {browserController = OWBrowserController; window = NSWindow; }; 
             SUPERCLASS = NSObject; 
         }
     ); 
