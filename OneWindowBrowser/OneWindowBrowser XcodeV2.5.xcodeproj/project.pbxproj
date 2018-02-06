@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		815DC2882025EE3A0004DB6E /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 815DC2862025EE3A0004DB6E /* MainMenu.nib */; };
 		815DC31C2025F6E20004DB6E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815DC31B2025F6E20004DB6E /* WebKit.framework */; };
-		81970F571ECC90ED00B43E6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81970F561ECC90ED00B43E6B /* AppDelegate.m */; };
-		81970F721ECC93A300B43E6B /* BrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81970F711ECC93A300B43E6B /* BrowserController.m */; };
-		819C76051EF8EC7700E5E636 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 819C76041EF8EC7700E5E636 /* Icon.icns */; };
-		819E08F71ED277A5009ED95B /* WindowHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 819E08F61ED277A5009ED95B /* WindowHelper.m */; };
+		81970F571ECC90ED00B43E6B /* OWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81970F561ECC90ED00B43E6B /* OWAppDelegate.m */; };
+		81970F721ECC93A300B43E6B /* OWBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81970F711ECC93A300B43E6B /* OWBrowserController.m */; };
+		819E08F71ED277A5009ED95B /* OWWindowHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 819E08F61ED277A5009ED95B /* OWWindowHelper.m */; };
+		81B730F52029D2DC008CA242 /* OWUserAgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B730F42029D2DC008CA242 /* OWUserAgentController.m */; };
+		81B732A32029E13F008CA242 /* OWLandingPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B732A22029E13F008CA242 /* OWLandingPageController.m */; };
+		81B733722029EF79008CA242 /* CustomLandingURL.nib in Resources */ = {isa = PBXBuildFile; fileRef = 81B7336E2029EF79008CA242 /* CustomLandingURL.nib */; };
+		81B733732029EF7A008CA242 /* CustomUserAgent.nib in Resources */ = {isa = PBXBuildFile; fileRef = 81B733702029EF79008CA242 /* CustomUserAgent.nib */; };
+		81B733A22029F0D7008CA242 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 81B733A12029F0D7008CA242 /* Credits.rtf */; };
+		81B73406202A0133008CA242 /* OWBIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 81B73405202A0133008CA242 /* OWBIcon.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -28,14 +33,21 @@
 		32CA4F630368D1EE00C91783 /* OneWindowBrowser_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneWindowBrowser_Prefix.pch; sourceTree = "<group>"; };
 		815DC2872025EE3A0004DB6E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		815DC31B2025F6E20004DB6E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
-		81970F551ECC90ED00B43E6B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		81970F561ECC90ED00B43E6B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		81970F701ECC93A300B43E6B /* BrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserController.h; sourceTree = "<group>"; };
-		81970F711ECC93A300B43E6B /* BrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserController.m; sourceTree = "<group>"; };
-		819C76041EF8EC7700E5E636 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
-		819E08F51ED277A5009ED95B /* WindowHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowHelper.h; sourceTree = "<group>"; };
-		819E08F61ED277A5009ED95B /* WindowHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowHelper.m; sourceTree = "<group>"; };
+		81970F551ECC90ED00B43E6B /* OWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAppDelegate.h; sourceTree = "<group>"; };
+		81970F561ECC90ED00B43E6B /* OWAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWAppDelegate.m; sourceTree = "<group>"; };
+		81970F701ECC93A300B43E6B /* OWBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWBrowserController.h; sourceTree = "<group>"; };
+		81970F711ECC93A300B43E6B /* OWBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWBrowserController.m; sourceTree = "<group>"; };
+		819E08F51ED277A5009ED95B /* OWWindowHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWWindowHelper.h; sourceTree = "<group>"; };
+		819E08F61ED277A5009ED95B /* OWWindowHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWWindowHelper.m; sourceTree = "<group>"; };
 		81A9E5FC1EF90673007D197E /* OneWindowBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWindowBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B730F32029D2DC008CA242 /* OWUserAgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUserAgentController.h; sourceTree = "<group>"; };
+		81B730F42029D2DC008CA242 /* OWUserAgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUserAgentController.m; sourceTree = "<group>"; };
+		81B732A12029E13F008CA242 /* OWLandingPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLandingPageController.h; sourceTree = "<group>"; };
+		81B732A22029E13F008CA242 /* OWLandingPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLandingPageController.m; sourceTree = "<group>"; };
+		81B7336F2029EF79008CA242 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/CustomLandingURL.nib; sourceTree = "<group>"; };
+		81B733712029EF79008CA242 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/CustomUserAgent.nib; sourceTree = "<group>"; };
+		81B733A12029F0D7008CA242 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		81B73405202A0133008CA242 /* OWBIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OWBIcon.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,12 +67,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				81970F551ECC90ED00B43E6B /* AppDelegate.h */,
-				81970F561ECC90ED00B43E6B /* AppDelegate.m */,
-				81970F701ECC93A300B43E6B /* BrowserController.h */,
-				81970F711ECC93A300B43E6B /* BrowserController.m */,
-				819E08F51ED277A5009ED95B /* WindowHelper.h */,
-				819E08F61ED277A5009ED95B /* WindowHelper.m */,
+				81970F551ECC90ED00B43E6B /* OWAppDelegate.h */,
+				81970F561ECC90ED00B43E6B /* OWAppDelegate.m */,
+				81970F701ECC93A300B43E6B /* OWBrowserController.h */,
+				81970F711ECC93A300B43E6B /* OWBrowserController.m */,
+				819E08F51ED277A5009ED95B /* OWWindowHelper.h */,
+				819E08F61ED277A5009ED95B /* OWWindowHelper.m */,
+				81B730F32029D2DC008CA242 /* OWUserAgentController.h */,
+				81B730F42029D2DC008CA242 /* OWUserAgentController.m */,
+				81B732A12029E13F008CA242 /* OWLandingPageController.h */,
+				81B732A22029E13F008CA242 /* OWLandingPageController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -116,10 +132,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				819C76041EF8EC7700E5E636 /* Icon.icns */,
+				81B73405202A0133008CA242 /* OWBIcon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				81B7336E2029EF79008CA242 /* CustomLandingURL.nib */,
+				81B733702029EF79008CA242 /* CustomUserAgent.nib */,
 				815DC2862025EE3A0004DB6E /* MainMenu.nib */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				81B733A12029F0D7008CA242 /* Credits.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -159,7 +178,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OneWindowBrowser" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OneWindowBrowser XcodeV2.5" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -181,8 +200,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				819C76051EF8EC7700E5E636 /* Icon.icns in Resources */,
 				815DC2882025EE3A0004DB6E /* MainMenu.nib in Resources */,
+				81B733722029EF79008CA242 /* CustomLandingURL.nib in Resources */,
+				81B733732029EF7A008CA242 /* CustomUserAgent.nib in Resources */,
+				81B733A22029F0D7008CA242 /* Credits.rtf in Resources */,
+				81B73406202A0133008CA242 /* OWBIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,9 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				81970F571ECC90ED00B43E6B /* AppDelegate.m in Sources */,
-				81970F721ECC93A300B43E6B /* BrowserController.m in Sources */,
-				819E08F71ED277A5009ED95B /* WindowHelper.m in Sources */,
+				81970F571ECC90ED00B43E6B /* OWAppDelegate.m in Sources */,
+				81970F721ECC93A300B43E6B /* OWBrowserController.m in Sources */,
+				819E08F71ED277A5009ED95B /* OWWindowHelper.m in Sources */,
+				81B730F52029D2DC008CA242 /* OWUserAgentController.m in Sources */,
+				81B732A32029E13F008CA242 /* OWLandingPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +241,22 @@
 				815DC2872025EE3A0004DB6E /* English */,
 			);
 			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		81B7336E2029EF79008CA242 /* CustomLandingURL.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B7336F2029EF79008CA242 /* English */,
+			);
+			name = CustomLandingURL.nib;
+			sourceTree = "<group>";
+		};
+		81B733702029EF79008CA242 /* CustomUserAgent.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B733712029EF79008CA242 /* English */,
+			);
+			name = CustomUserAgent.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -244,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_ENABLE_OBJC_GC = required;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Debug;
 		};
@@ -251,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_ENABLE_OBJC_GC = required;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Release;
 		};
@@ -266,7 +308,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OneWindowBrowser" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OneWindowBrowser XcodeV2.5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
