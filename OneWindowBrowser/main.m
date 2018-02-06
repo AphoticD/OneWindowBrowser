@@ -3,7 +3,7 @@
 //  OneWindowBrowser
 //
 //  Created by Daniel Brunet on 18/05/17.
-//  Copyright Aphotic 2017. All rights reserved.
+//  Copyright Aphotic 2018. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
