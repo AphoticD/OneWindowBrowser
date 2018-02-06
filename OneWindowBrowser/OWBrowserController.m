@@ -61,7 +61,7 @@ didReceiveTitle:(NSString *)title
 	//stop the spinning progress indicator
 	[[self myProgress] stopAnimation:self];
 	
-	[[self myProgress] setHidden:YES];
+	//[[self myProgress] setHidden:YES];
 	
 } //webView:didFinishLoadForFrame
 
@@ -69,7 +69,7 @@ didReceiveTitle:(NSString *)title
 - (void)webView:(WebView *)sender
 			didStartProvisionalLoadForFrame:(WebFrame *)frame
 {
-	[[self myProgress] setHidden:NO];
+	//[[self myProgress] setHidden:NO];
 	
 	//start the spinning address indicator when a load begins
 	[[self myProgress] startAnimation:self];
@@ -221,7 +221,7 @@ didReceiveTitle:(NSString *)title
 - (void) performGoToLanding: (id) sender
 {
 	//load in the default landing page URL string
-	[[self address] setStringValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"landingPageURL"]];
+	[[self address] setStringValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"landingPageURL"]];
 	
 	//simulate hitting Enter on the address field
 	[self enterAddress:self];

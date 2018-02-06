@@ -92,12 +92,13 @@
 	[[self window] setFrameAutosaveName:@"OneWindowBrowser"];
 	
     //load window alpha value
-    if([[NSUserDefaults standardUserDefaults] floatForKey:@"windowAlpha"])
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"windowAlpha"])
         [[self window] setAlphaValue:
 			[[NSUserDefaults standardUserDefaults] floatForKey:@"windowAlpha"]];
 
     //load in landing page options
-	if([[NSUserDefaults standardUserDefaults] boolForKey:@"landingPageLastViewed"] == YES) {
+	if([[NSUserDefaults standardUserDefaults] objectForKey:@"landingPageLastViewed"] &&
+	   [[NSUserDefaults standardUserDefaults] boolForKey:@"landingPageLastViewed"] == YES) {
 		[[[self browserController] address] setStringValue:
 			[[NSUserDefaults standardUserDefaults] objectForKey:@"addressURL"]]; //last viewed page on quit
 	} else {
@@ -110,19 +111,19 @@
 			[[[self browserController] address] setStringValue:kBrowserDefaultLandingURL]; //otherwise load default
 
 			//assign the default to the user prefs
-			[[NSUserDefaults standardUserDefaults] setValue:kBrowserDefaultLandingURL
-													 forKey:@"landingPageURL"];
+			[[NSUserDefaults standardUserDefaults] setObject:kBrowserDefaultLandingURL
+													  forKey:@"landingPageURL"];
 		}
 	}
 	
 	//apply default option for landingPageLastViewed if not already set
 	//(performed after the first test, which would allow the default page to load if key is not set)
-	if([[NSUserDefaults standardUserDefaults] valueForKey:@"landingPageLastViewed"] == nil)
+	if([[NSUserDefaults standardUserDefaults] objectForKey:@"landingPageLastViewed"] == nil)
 		[[NSUserDefaults standardUserDefaults] setBool:	klandingPageLastViewed
 												forKey:@"landingPageLastViewed"];
 	
 	//read the stored textSizeMultiplier (browserController)
-	if([[NSUserDefaults standardUserDefaults] floatForKey:@"textSize"]) {
+	if([[NSUserDefaults standardUserDefaults] objectForKey:@"textSize"]) {
 		[[[self browserController] myWebView] setTextSizeMultiplier:
 			[[NSUserDefaults standardUserDefaults] floatForKey:@"textSize"]];
 	}
@@ -139,7 +140,7 @@
 	
 	//set the UserAgent from preferences, or use the default user agent string
 	NSString *userAgentString = kDefaultUserAgentString;
-	if([[NSUserDefaults standardUserDefaults] stringForKey:@"userAgentString"])
+	if([[NSUserDefaults standardUserDefaults] objectForKey:@"userAgentString"])
 		userAgentString = [[NSUserDefaults standardUserDefaults] stringForKey:@"userAgentString"];
 	
 	[[[self browserController] myWebView] setCustomUserAgent:userAgentString];
@@ -148,7 +149,8 @@
 	[[[self browserController] myWebView] takeStringURLFrom:[[self browserController] address]];
 	
 	//restore javascript option
-	if([[NSUserDefaults standardUserDefaults] boolForKey:@"JavascriptDisabled"] == YES)
+	if([[NSUserDefaults standardUserDefaults] objectForKey:@"JavascriptDisabled"] &&
+	   [[NSUserDefaults standardUserDefaults] boolForKey:@"JavascriptDisabled"] == YES)
 		[[self browserController] performDisableJavascriptOption:self];
 		
 } //loadPreferences
@@ -161,7 +163,7 @@
 	
 	//persist last address URL and text size, stored in user defaults (Preferences)
 	NSString *addressURL = [[[self browserController] address] stringValue];
-	[[NSUserDefaults standardUserDefaults] setValue:addressURL forKey:@"addressURL"];
+	[[NSUserDefaults standardUserDefaults] setObject:addressURL forKey:@"addressURL"];
 		
 	float textSize = [[[self browserController] myWebView] textSizeMultiplier];
 	[[NSUserDefaults standardUserDefaults] setFloat:textSize forKey:@"textSize"];
@@ -194,7 +196,7 @@
 	[historyArray release];
 	
 	//save the current user agent string
-	[[NSUserDefaults standardUserDefaults] setValue:[[[self browserController] myWebView] customUserAgent]
+	[[NSUserDefaults standardUserDefaults] setObject:[[[self browserController] myWebView] customUserAgent]
 											  forKey:@"userAgentString"];
 
 	//save the javascript option

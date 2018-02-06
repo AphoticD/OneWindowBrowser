@@ -41,8 +41,8 @@
 
 	//load in the landingPageURL from user defaults (if exists)
 	NSString *landingPageURL = kBrowserDefaultLandingURL;
-	if([[NSUserDefaults standardUserDefaults] valueForKey:@"landingPageURL"])
-		landingPageURL = [[NSUserDefaults standardUserDefaults] valueForKey:@"landingPageURL"];
+	if([[NSUserDefaults standardUserDefaults] objectForKey:@"landingPageURL"])
+		landingPageURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"landingPageURL"];
 	
 	[[self textField] setStringValue:landingPageURL];
 	
@@ -95,8 +95,8 @@
 - (IBAction) performOK: (id) sender
 {
 	//store the custom landing page URL in the user defaults
-	[[NSUserDefaults standardUserDefaults] setValue:[[self textField] stringValue]
-											 forKey:@"landingPageURL"];
+	[[NSUserDefaults standardUserDefaults] setObject:[[self textField] stringValue]
+											  forKey:@"landingPageURL"];
 
 	//override the lastViewed key to flag the custom URL for use
 	[[NSUserDefaults standardUserDefaults] setBool:NO
@@ -111,8 +111,8 @@
 - (IBAction) performUseDefault: (id) sender
 {
 	//store the DEFAULT landing page URL in the user defaults
-	[[NSUserDefaults standardUserDefaults] setValue:kBrowserDefaultLandingURL
-											 forKey:@"landingPageURL"];
+	[[NSUserDefaults standardUserDefaults] setObject:kBrowserDefaultLandingURL
+											  forKey:@"landingPageURL"];
 	
 	//override the lastViewed key to flag the custom URL for use
 	[[NSUserDefaults standardUserDefaults] setBool:NO
