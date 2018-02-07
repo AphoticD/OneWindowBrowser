@@ -27,7 +27,7 @@
 - (void) dealloc
 {
     [browserController release];
-    
+    [userAgentSheet release];
     [super dealloc];
     
 } //dealloc
@@ -78,6 +78,7 @@
     [[NSUserDefaults standardUserDefaults] setBool:NO
                                             forKey:@"landingPageLastViewed"];
 }
+ //saveLandingPage:
 
 - (void) performCustomUserAgentOption
 {
