@@ -24,9 +24,11 @@ Simple proof of concept Cocoa (WebKit) browser GUI, which runs on Jaguar 10.2.x 
 * Initial release;
 
 
-Download pre-compiled builds (.zip) or
-    Build Xcode v2.5 project file on Tiger for 10.2 through to 10.5 (PowerPC and Universal Binary).
-    Build Xcode v8 project file on El Cap or higher for 10.6 through to 10.13 (x86_64)
+### Download pre-compiled builds (.zip) or ###
+- Build Xcode v8.2.1 on El Capitan or higher for 10.6 through to 10.13 (x86_64)
+- Build Xcode V3.1.4 on Leopard for 10.4.4 through to 10.6.8 (i386)
+- Build Xcode v2.5 on Tiger for 10.2.0 (Requires Safari) through to 10.5.8 (PowerPC)
+
 
 ## Features: ##
 * Java and plugins are disabled.
