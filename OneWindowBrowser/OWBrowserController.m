@@ -8,7 +8,7 @@
 
 #import "OWBrowserController.h"
 #import "OWAppDelegate.h"
-#import "OWUserAgentController.h"
+#import "OWPreferencesController.h"
 #import "OWLandingPageController.h"
 #import <WebKit/WebKit.h>
 
@@ -18,8 +18,7 @@
 - (void) dealloc
 {
 	[historyURLs release];
-    [userAgentController release];
-	[landingPageController release];
+    [preferencesController release];
 	
 	[super dealloc];
 
@@ -238,33 +237,15 @@ didReceiveTitle:(NSString *)title
 } //performDisableJavascriptOption:
 
 
-- (void) performCustomUserAgentOption: (id) sender
+- (IBAction) performShowPreferences: (id) sender
 {
-	if(userAgentController == nil)
-		userAgentController = [[OWUserAgentController alloc] initWithWindowNibName:@"CustomUserAgent"
+	if(preferencesController == nil)
+		preferencesController = [[OWPreferencesController alloc] initWithWindowNibName:@"Preferences"
 																 browserController:self];
-	[userAgentController showWindow:self];
+
+	[preferencesController showWindow:self];
 	
-} //performCustomUserAgentOption:
-
-
-- (void) performSetLandingToLastViewed: (id) sender
-{
-	[[NSUserDefaults standardUserDefaults] setBool:YES
-											forKey:@"landingPageLastViewed"];
-	
-} //performSetLandingToLastViewed
-
-
-- (void) performSetLandingToCustom: (id) sender
-{
-	if(landingPageController == nil)
-		landingPageController = [[OWLandingPageController alloc] initWithWindowNibName:@"CustomLandingURL"
-																	 browserController:self];
-	[landingPageController showWindow:self];
-	
-} //performSetLandingToCustom
-
+} //performShowPreferences:
 
 #pragma mark Accessors
 
@@ -344,24 +325,11 @@ didReceiveTitle:(NSString *)title
 } //disableJavascriptOption
 
 
-- (NSMenuItem *) customUserAgentOption
+- (NSMenuItem *) goToPreferences
 {
-	return customUserAgentOption;
-
-} //customUserAgentOption
-
-
-- (NSMenuItem *) landingLastViewed
-{
-	return landingLastViewed;
-} //landingLastViewed
-
-
-- (NSMenuItem *) landingCustom
-{
-	return landingCustom;
+	return goToPreferences;
 	
-} //landingCustom
+} //goToPreferences
 
 
 - (NSMutableArray *) historyURLs
@@ -380,20 +348,8 @@ didReceiveTitle:(NSString *)title
 		[menuItem setState:[[[self myWebView] preferences] isJavaScriptEnabled]?
 			   NSOffState : NSOnState]; //inverted; Disabled == NSOnState, Enabled == NSOffState
 		return YES;
-	}
-	
-	if([menuItem action] == @selector(performSetLandingToLastViewed:)) {
-		[menuItem setState:[[NSUserDefaults standardUserDefaults] boolForKey:@"landingPageLastViewed"]?
-				NSOnState : NSOffState];
-		return YES;
-	}
+    }
 
-	if([menuItem action] == @selector(performSetLandingToCustom:)) {
-		[menuItem setState:[[NSUserDefaults standardUserDefaults] boolForKey:@"landingPageLastViewed"]?
-				NSOffState : NSOnState]; //inverted state
-		return YES;
-	}
-	
 	return YES;
 	
 }  //validateMenuItem:

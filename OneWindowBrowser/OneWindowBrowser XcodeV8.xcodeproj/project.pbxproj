@@ -18,6 +18,8 @@
 		81F187E32029F8340066D7A0 /* OWUserAgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F187DD2029F8340066D7A0 /* OWUserAgentController.m */; };
 		81F187E42029F8340066D7A0 /* OWWindowHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F187DF2029F8340066D7A0 /* OWWindowHelper.m */; };
 		81F187EA202A16020066D7A0 /* OWBIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 81F187E9202A16020066D7A0 /* OWBIcon.icns */; };
+		8ADD1DE6202A7B000099F863 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8ADD1DE4202A7B000099F863 /* Preferences.nib */; };
+		8ADD1DE8202A7C380099F863 /* OWPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD1DE7202A7C380099F863 /* OWPreferencesController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -48,6 +50,9 @@
 		81F187DE2029F8340066D7A0 /* OWWindowHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWWindowHelper.h; sourceTree = "<group>"; };
 		81F187DF2029F8340066D7A0 /* OWWindowHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWWindowHelper.m; sourceTree = "<group>"; };
 		81F187E9202A16020066D7A0 /* OWBIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = OWBIcon.icns; path = HiDPIResources/OWBIcon.icns; sourceTree = "<group>"; };
+		8ADD1DE5202A7B000099F863 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
+		8ADD1DE7202A7C380099F863 /* OWPreferencesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWPreferencesController.m; sourceTree = "<group>"; };
+		8ADD1DE9202A7C560099F863 /* OWPreferencesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWPreferencesController.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +80,8 @@
 				81F187DB2029F8340066D7A0 /* OWLandingPageController.m */,
 				81F187DC2029F8340066D7A0 /* OWUserAgentController.h */,
 				81F187DD2029F8340066D7A0 /* OWUserAgentController.m */,
+				8ADD1DE9202A7C560099F863 /* OWPreferencesController.h */,
+				8ADD1DE7202A7C380099F863 /* OWPreferencesController.m */,
 				81F187DE2029F8340066D7A0 /* OWWindowHelper.h */,
 				81F187DF2029F8340066D7A0 /* OWWindowHelper.m */,
 			);
@@ -137,6 +144,7 @@
 				81F187CE2029F81A0066D7A0 /* CustomLandingURL.nib */,
 				81F187D02029F81A0066D7A0 /* CustomUserAgent.nib */,
 				815DC2862025EE3A0004DB6E /* MainMenu.nib */,
+				8ADD1DE4202A7B000099F863 /* Preferences.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -206,6 +214,7 @@
 				81F187D22029F81A0066D7A0 /* CustomLandingURL.nib in Resources */,
 				81F187EA202A16020066D7A0 /* OWBIcon.icns in Resources */,
 				815DC2882025EE3A0004DB6E /* MainMenu.nib in Resources */,
+				8ADD1DE6202A7B000099F863 /* Preferences.nib in Resources */,
 				81F187D52029F8280066D7A0 /* Credits.rtf in Resources */,
 				81F187D32029F81A0066D7A0 /* CustomUserAgent.nib in Resources */,
 			);
@@ -224,6 +233,7 @@
 				81F187E42029F8340066D7A0 /* OWWindowHelper.m in Sources */,
 				81F187E22029F8340066D7A0 /* OWLandingPageController.m in Sources */,
 				81F187E02029F8340066D7A0 /* OWAppDelegate.m in Sources */,
+				8ADD1DE8202A7C380099F863 /* OWPreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +270,14 @@
 				81F187D12029F81A0066D7A0 /* English */,
 			);
 			name = CustomUserAgent.nib;
+			sourceTree = "<group>";
+		};
+		8ADD1DE4202A7B000099F863 /* Preferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ADD1DE5202A7B000099F863 /* English */,
+			);
+			name = Preferences.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
