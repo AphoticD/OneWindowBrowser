@@ -7,7 +7,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class OWBrowserController;
+@class OWBrowserController, OWUserAgentController;
 
 @interface OWPreferencesController : NSWindowController{
     IBOutlet NSTextField *landingPageField;
@@ -15,6 +15,7 @@
     IBOutlet NSButton *setLandingPageButton;
     
     OWBrowserController *browserController;
+    NSWindow *userAgentSheet;
 }
 
 - (id) initWithWindowNibName: (NSString *) nibName
@@ -25,5 +26,6 @@
 - (NSButton *) setLandingPageButton;
 
 - (OWBrowserController *) browserController;
+- (NSWindow *) userAgentSheet;
 
 @end

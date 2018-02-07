@@ -12,25 +12,19 @@
 
 @interface OWUserAgentController : NSWindowController {
 	IBOutlet NSTextField *textField;
-	IBOutlet NSButton *cancelButton;
-	IBOutlet NSButton *okButton;
-	IBOutlet NSButton *useDefaultButton;
+	IBOutlet NSButton *doneButton;
 	
 	OWBrowserController *browserController;
 }
 
-- (id) initWithWindowNibName: (NSString *) nibName
+- (NSWindow *) initWithPanelNibName: (NSString *) nibName
 		   browserController: (OWBrowserController *) aController;
 
 - (NSTextField *) textField;
-- (NSButton *) cancelButton;
-- (NSButton *) okButton;
-- (NSButton *) useDefaultButton;
+- (NSButton *) doneButton;
 
 - (OWBrowserController *) browserController;
 
-- (IBAction) performCancel:(id) sender;
-- (IBAction) performOK: (id) sender;
-- (IBAction) performUseDefault: (id) sender;
+- (IBAction) performDone: (id) sender;
 
 @end

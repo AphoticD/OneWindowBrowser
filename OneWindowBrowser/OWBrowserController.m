@@ -9,7 +9,6 @@
 #import "OWBrowserController.h"
 #import "OWAppDelegate.h"
 #import "OWPreferencesController.h"
-#import "OWLandingPageController.h"
 #import <WebKit/WebKit.h>
 
 

@@ -8,6 +8,7 @@
 #import "OWBrowserController.h"
 #import "OWAppDelegate.h"
 #import "OWPreferencesController.h"
+#import "OWUserAgentController.h"
 #import <WebKit/WebKit.h>
 
 @implementation OWPreferencesController
@@ -78,6 +79,24 @@
                                             forKey:@"landingPageLastViewed"];
 }
 
+- (void) performCustomUserAgentOption
+{
+    if(userAgentSheet == nil)
+        userAgentSheet = [[OWUserAgentController alloc] initWithPanelNibName:@"CustomUserAgent"
+                                                                 browserController:self.browserController];
+   // [userAgentController showWindow:self];
+    
+    [NSApp beginSheet:userAgentSheet modalForWindow:[self window] modalDelegate:self didEndSelector:@selector(sheetClosed:) contextInfo:nil];
+    
+} //performCustomUserAgentOption
+
+- (IBAction)performUserAgentUpdate: (id) sender
+{
+    if([[self userAgentSelector] indexOfSelectedItem] == 1){
+        [self performCustomUserAgentOption];
+    }
+}  //performUserAgentUpdate:
+
 - (IBAction) setLandingPageToCurrentPage: (id) sender
 {
     NSString *currentURL = [[[self browserController] myWebView] mainFrameURL];
@@ -86,6 +105,12 @@
     [self saveLandingPage:currentURL];
     
 } //setLandingPageToCurrentPage:
+
+- (void)sheetClosed:(NSWindow *)sheet
+{
+    [sheet orderOut:self];
+}
+//sheetClosed:
 
 - (NSTextField *) landingPageField
 {
@@ -113,6 +138,12 @@
     return browserController;
     
 } //browserController
+
+- (NSWindow *) userAgentSheet
+{
+    return userAgentSheet;
+    
+} //userAgentSheet
 
 
 @end
