@@ -60,8 +60,10 @@ didReceiveTitle:(NSString *)title
 	
 	//stop the spinning progress indicator
 	[[self myProgress] stopAnimation:self];
-	
-	//[[self myProgress] setHidden:YES];
+
+	//Jaguar didn't support hiding views, so test we can first
+	if([[self myProgress] respondsToSelector:@selector(setHidden:)])
+		[[self myProgress] setHidden:YES];
 	
 } //webView:didFinishLoadForFrame
 
@@ -69,7 +71,9 @@ didReceiveTitle:(NSString *)title
 - (void)webView:(WebView *)sender
 			didStartProvisionalLoadForFrame:(WebFrame *)frame
 {
-	//[[self myProgress] setHidden:NO];
+	//Jaguar didn't support hiding views, so test we can first
+	if([[self myProgress] respondsToSelector:@selector(setHidden:)])
+		[[self myProgress] setHidden:NO];
 	
 	//start the spinning address indicator when a load begins
 	[[self myProgress] startAnimation:self];
