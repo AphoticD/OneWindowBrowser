@@ -13,14 +13,14 @@
 
 @implementation OWUserAgentController
 
-- (id) initWithWindowNibName: (NSString *) nibName
+- (NSWindow *) initWithPanelNibName: (NSString *) nibName
 		   browserController: (OWBrowserController *) aController
 {
 	if(self = [super initWithWindowNibName: nibName]) {		
 		browserController = [aController retain];
 	}
 	
-	return self;
+	return self.window;
 
 } //initWithWindowNibName:browserController:
 
@@ -50,25 +50,11 @@
 } //textField
 
 
-- (NSButton *) cancelButton
+- (NSButton *) doneButton
 {
-	return cancelButton;
+	return doneButton;
 
-} //cancelButton
-
-
-- (NSButton *) okButton
-{
-	return okButton;
-
-} //okButton
-
-
-- (NSButton *) useDefaultButton
-{
-	return useDefaultButton;
-
-} //useDefaultButton
+} //doneButton
 
 
 - (OWBrowserController *) browserController
@@ -78,33 +64,22 @@
 } //browserController
 
 
-- (IBAction) performCancel:(id) sender
+- (IBAction) performDone: (id) sender
 {
-	//close the window
-	[[self window] close];
-
-} //performCancel
-
-
-- (IBAction) performOK: (id) sender
-{
+    NSString *userAgentString = [[self textField] stringValue];
 	//send the custom user agent to the web view
-	[[[self browserController] myWebView] setCustomUserAgent:[[self textField] stringValue]];
+	[[[self browserController] myWebView] setCustomUserAgent: userAgentString];
 	
-	//close the window
-	[[self window] close];
+    //store the custom landing page URL in the user defaults
+    [[NSUserDefaults standardUserDefaults] setObject:userAgentString
+                                              forKey:@"userAgentString"];
+    
+	//close the sheet
+    [NSApp endSheet:[self window]];
 
-} //performOK:
+} //performDone:
 
 
-- (IBAction) performUseDefault: (id) sender
-{
-	//send the custom user agent to the web view
-	[[[self browserController] myWebView] setCustomUserAgent:kDefaultUserAgentString];
-	
-	//close the window
-	[[self window] close];
-	
-} //performUseDefault:
+
 
 @end

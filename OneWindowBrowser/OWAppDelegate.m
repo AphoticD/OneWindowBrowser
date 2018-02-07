@@ -99,8 +99,10 @@
     //load in landing page options
 	if([[NSUserDefaults standardUserDefaults] objectForKey:@"landingPageLastViewed"] &&
 	   [[NSUserDefaults standardUserDefaults] boolForKey:@"landingPageLastViewed"] == YES) {
-		[[[self browserController] address] setStringValue:
-			[[NSUserDefaults standardUserDefaults] objectForKey:@"addressURL"]]; //last viewed page on quit
+        if([[NSUserDefaults standardUserDefaults] objectForKey:@"addressURL"]){
+            [[[self browserController] address] setStringValue:
+             [[NSUserDefaults standardUserDefaults] objectForKey:@"addressURL"]]; //last viewed page on quit
+        }
 	} else {
 		
 		//read the custom set default landing page user defaults if exists (browserController)

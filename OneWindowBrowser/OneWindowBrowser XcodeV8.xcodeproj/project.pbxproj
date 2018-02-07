@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		815DC2882025EE3A0004DB6E /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 815DC2862025EE3A0004DB6E /* MainMenu.nib */; };
 		815DC31C2025F6E20004DB6E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815DC31B2025F6E20004DB6E /* WebKit.framework */; };
-		81F187D22029F81A0066D7A0 /* CustomLandingURL.nib in Resources */ = {isa = PBXBuildFile; fileRef = 81F187CE2029F81A0066D7A0 /* CustomLandingURL.nib */; };
 		81F187D32029F81A0066D7A0 /* CustomUserAgent.nib in Resources */ = {isa = PBXBuildFile; fileRef = 81F187D02029F81A0066D7A0 /* CustomUserAgent.nib */; };
 		81F187D52029F8280066D7A0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 81F187D42029F8280066D7A0 /* Credits.rtf */; };
 		81F187E02029F8340066D7A0 /* OWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F187D72029F8340066D7A0 /* OWAppDelegate.m */; };
 		81F187E12029F8340066D7A0 /* OWBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F187D92029F8340066D7A0 /* OWBrowserController.m */; };
-		81F187E22029F8340066D7A0 /* OWLandingPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F187DB2029F8340066D7A0 /* OWLandingPageController.m */; };
 		81F187E32029F8340066D7A0 /* OWUserAgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F187DD2029F8340066D7A0 /* OWUserAgentController.m */; };
 		81F187E42029F8340066D7A0 /* OWWindowHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F187DF2029F8340066D7A0 /* OWWindowHelper.m */; };
 		81F187EA202A16020066D7A0 /* OWBIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 81F187E9202A16020066D7A0 /* OWBIcon.icns */; };
+		8ADD1DE6202A7B000099F863 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8ADD1DE4202A7B000099F863 /* Preferences.nib */; };
+		8ADD1DE8202A7C380099F863 /* OWPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD1DE7202A7C380099F863 /* OWPreferencesController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -34,20 +34,20 @@
 		815DC2872025EE3A0004DB6E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		815DC31B2025F6E20004DB6E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		81A9E5FC1EF90673007D197E /* OneWindowBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWindowBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		81F187CF2029F81A0066D7A0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/CustomLandingURL.nib; sourceTree = "<group>"; };
 		81F187D12029F81A0066D7A0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/CustomUserAgent.nib; sourceTree = "<group>"; };
 		81F187D42029F8280066D7A0 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		81F187D62029F8340066D7A0 /* OWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAppDelegate.h; sourceTree = "<group>"; };
 		81F187D72029F8340066D7A0 /* OWAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWAppDelegate.m; sourceTree = "<group>"; };
 		81F187D82029F8340066D7A0 /* OWBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWBrowserController.h; sourceTree = "<group>"; };
 		81F187D92029F8340066D7A0 /* OWBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWBrowserController.m; sourceTree = "<group>"; };
-		81F187DA2029F8340066D7A0 /* OWLandingPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWLandingPageController.h; sourceTree = "<group>"; };
-		81F187DB2029F8340066D7A0 /* OWLandingPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWLandingPageController.m; sourceTree = "<group>"; };
 		81F187DC2029F8340066D7A0 /* OWUserAgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUserAgentController.h; sourceTree = "<group>"; };
 		81F187DD2029F8340066D7A0 /* OWUserAgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUserAgentController.m; sourceTree = "<group>"; };
 		81F187DE2029F8340066D7A0 /* OWWindowHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWWindowHelper.h; sourceTree = "<group>"; };
 		81F187DF2029F8340066D7A0 /* OWWindowHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWWindowHelper.m; sourceTree = "<group>"; };
 		81F187E9202A16020066D7A0 /* OWBIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = OWBIcon.icns; path = HiDPIResources/OWBIcon.icns; sourceTree = "<group>"; };
+		8ADD1DE5202A7B000099F863 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
+		8ADD1DE7202A7C380099F863 /* OWPreferencesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWPreferencesController.m; sourceTree = "<group>"; };
+		8ADD1DE9202A7C560099F863 /* OWPreferencesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWPreferencesController.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,10 +71,10 @@
 				81F187D72029F8340066D7A0 /* OWAppDelegate.m */,
 				81F187D82029F8340066D7A0 /* OWBrowserController.h */,
 				81F187D92029F8340066D7A0 /* OWBrowserController.m */,
-				81F187DA2029F8340066D7A0 /* OWLandingPageController.h */,
-				81F187DB2029F8340066D7A0 /* OWLandingPageController.m */,
 				81F187DC2029F8340066D7A0 /* OWUserAgentController.h */,
 				81F187DD2029F8340066D7A0 /* OWUserAgentController.m */,
+				8ADD1DE9202A7C560099F863 /* OWPreferencesController.h */,
+				8ADD1DE7202A7C380099F863 /* OWPreferencesController.m */,
 				81F187DE2029F8340066D7A0 /* OWWindowHelper.h */,
 				81F187DF2029F8340066D7A0 /* OWWindowHelper.m */,
 			);
@@ -134,9 +134,9 @@
 			children = (
 				81F187E9202A16020066D7A0 /* OWBIcon.icns */,
 				81F187D42029F8280066D7A0 /* Credits.rtf */,
-				81F187CE2029F81A0066D7A0 /* CustomLandingURL.nib */,
 				81F187D02029F81A0066D7A0 /* CustomUserAgent.nib */,
 				815DC2862025EE3A0004DB6E /* MainMenu.nib */,
+				8ADD1DE4202A7B000099F863 /* Preferences.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -203,9 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				81F187D22029F81A0066D7A0 /* CustomLandingURL.nib in Resources */,
 				81F187EA202A16020066D7A0 /* OWBIcon.icns in Resources */,
 				815DC2882025EE3A0004DB6E /* MainMenu.nib in Resources */,
+				8ADD1DE6202A7B000099F863 /* Preferences.nib in Resources */,
 				81F187D52029F8280066D7A0 /* Credits.rtf in Resources */,
 				81F187D32029F81A0066D7A0 /* CustomUserAgent.nib in Resources */,
 			);
@@ -222,8 +222,8 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				81F187E32029F8340066D7A0 /* OWUserAgentController.m in Sources */,
 				81F187E42029F8340066D7A0 /* OWWindowHelper.m in Sources */,
-				81F187E22029F8340066D7A0 /* OWLandingPageController.m in Sources */,
 				81F187E02029F8340066D7A0 /* OWAppDelegate.m in Sources */,
+				8ADD1DE8202A7C380099F863 /* OWPreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,20 +246,20 @@
 			name = MainMenu.nib;
 			sourceTree = "<group>";
 		};
-		81F187CE2029F81A0066D7A0 /* CustomLandingURL.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				81F187CF2029F81A0066D7A0 /* English */,
-			);
-			name = CustomLandingURL.nib;
-			sourceTree = "<group>";
-		};
 		81F187D02029F81A0066D7A0 /* CustomUserAgent.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				81F187D12029F81A0066D7A0 /* English */,
 			);
 			name = CustomUserAgent.nib;
+			sourceTree = "<group>";
+		};
+		8ADD1DE4202A7B000099F863 /* Preferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ADD1DE5202A7B000099F863 /* English */,
+			);
+			name = Preferences.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class WebView, OWUserAgentController, OWLandingPageController;
+@class WebView, OWPreferencesController;
 
 @interface OWBrowserController : NSObject {
 	IBOutlet NSTextField *address;
@@ -22,16 +22,12 @@
 	IBOutlet NSMenu *historyMenu;
 	IBOutlet NSMenuItem *clearHistory;
 	IBOutlet NSMenuItem *goToLanding;
-	
-	IBOutlet NSMenuItem *disableJavascriptOption;
-	IBOutlet NSMenuItem *customUserAgentOption;
-	
-	IBOutlet NSMenuItem *landingLastViewed;
-	IBOutlet NSMenuItem *landingCustom;
+    
+    IBOutlet NSMenuItem *disableJavascriptOption;
+	IBOutlet NSMenuItem *goToPreferences;
 	
 	NSMutableArray *historyURLs;
-	OWUserAgentController *userAgentController;
-	OWLandingPageController *landingPageController;
+	OWPreferencesController *preferencesController;
 }
 
 - (IBAction) enterAddress:(id) sender;
@@ -44,10 +40,8 @@
 - (void) performGoToLanding: (id) sender;
 
 - (void) performDisableJavascriptOption: (id) sender;
-- (void) performCustomUserAgentOption: (id) sender;
+- (void) performShowPreferences: (id) sender;
 
-- (void) performSetLandingToLastViewed: (id) sender;
-- (void) performSetLandingToCustom: (id) sender;
 
 - (NSButton *) backButton;
 - (NSButton *) forwardButton;
@@ -62,10 +56,8 @@
 - (NSMenuItem *) goToLanding;
 
 - (NSMenuItem *) disableJavascriptOption;
-- (NSMenuItem *) customUserAgentOption;
 
-- (NSMenuItem *) landingLastViewed;
-- (NSMenuItem *) landingCustom;
+- (NSMenuItem *) goToPreferences;
 
 - (NSMutableArray *) historyURLs;
 
